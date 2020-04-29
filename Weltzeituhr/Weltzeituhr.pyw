@@ -5,8 +5,7 @@ import re
 
 def setAlarm(x):
     pattern = re.compile("^([0-9]{2}):([0-9]{2})$")
-    pattern.match(string) # insert Test
-    if e1[x].get() != "HH:MM":
+    if pattern.match(e1[x].get()) and e1[x].get() != "HH:MM":
         if b3[x] == False:
             l6[x].config(text=e1[x].get())
             b3[x] = True
@@ -40,7 +39,7 @@ def compareAlarm(time, x):
 
 def alarm(x):
     b4[x] = True
-    print("Alarm"+l1[x].cget("text")) # send Alarms
+    print("Alarm"+l1[x].cget("text")) # implement flashy Alarm
 
 # initialize GUI
 root = Tk() # root plane
