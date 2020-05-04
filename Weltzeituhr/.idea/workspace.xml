@@ -113,8 +113,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="845" y="382" width="559" height="409" key="#Notifications" timestamp="1588590142410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="845" y="382" width="559" height="409" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1588590142410" />
     <state x="440" y="94" key="#Project_Structure" timestamp="1588573246115">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
