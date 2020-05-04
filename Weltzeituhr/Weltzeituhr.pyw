@@ -41,7 +41,8 @@ def compare_alarm(time_local, x_local):
 
 def alarm(x_local):
     b4[x_local] = True
-    print("Alarm" + l1[x_local].cget("text"))  # implement flashy Alarm
+    print("Alarm" + l1[x_local].cget("text"))
+    # todo implement flashy Alarm
 
 
 # initialize GUI
