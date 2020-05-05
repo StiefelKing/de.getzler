@@ -40,7 +40,7 @@ def compare_alarm(time_local, x_local):
         f2[x_local] = True
 
 
-def alarm(x_local):
+def alarm():
     sleep(0.05)
     winsound.Beep(1000, 100)
 
@@ -56,7 +56,7 @@ l3 = []  # label Time
 l4 = []  # label Date
 l5 = []  # label "Alarm"
 l6 = []  # label alarm_time
-e1 = []  # Entrybox
+e1 = []  # entry box
 b1 = []  # toggle Alarm
 b2 = []  # snooze Alarm
 f1 = [False] * 3  # Flag, if Alarm is set
@@ -110,7 +110,7 @@ while True:
         l4[x].config(text=date)
         compare_alarm(datetime.now(tz.get(x, timezone.utc)).strftime("%H:%M"), x)
         if f2[x]:
-            alarm(x)
+            alarm()
             l5[x].config(bg="red")
         else:
             l5[x].config(bg="SystemButtonFace")
