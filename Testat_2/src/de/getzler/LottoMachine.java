@@ -1,11 +1,11 @@
-package de.Getzler;
+package de.getzler;
 
 import java.util.Arrays;
 import java.util.Random;
 
 public class LottoMachine
 {
-    private int[] lottoNumbers;
+    private final int[] lottoNumbers;
 
     public LottoMachine()
     {

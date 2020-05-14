@@ -1,4 +1,4 @@
-package de.Getzler;
+package de.getzler;
 
 import java.io.File;
 import java.io.FileWriter;

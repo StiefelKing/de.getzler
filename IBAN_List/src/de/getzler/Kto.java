@@ -1,4 +1,4 @@
-package de.Getzler;
+package de.getzler;
 
 public class Kto
 {
@@ -24,7 +24,7 @@ public class Kto
         // array initialization
         int[] arrayKto = initializeArray(seed);
 
-        // check if Stelle 3 is a 9
+        // check if Digit 3 is a 9
         int j;
         if (arrayKto[2] == 9)
         {
@@ -61,7 +61,7 @@ public class Kto
 
     public int[] initializeArray(int seed)
     {
-        //123456789 Stelle
+        //123456789 Digits
         //012345678 Array
         String temp = Integer.toString(seed);
         int[] arrayKto = new int[9];

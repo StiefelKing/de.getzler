@@ -2,6 +2,7 @@ from array import *
 from random import *
 from math import *
 
+
 def fibonacci():
     print("")
     print("Bis zu welchem Element soll die Sequenz berechnet werden?")
@@ -9,13 +10,13 @@ def fibonacci():
     print(" 0 = bis Element  0")
     print(" 1 = bis Element  1")
     endNumber = int(input())
-    fibonacciNumbers = [None] * (abs(endNumber)+1)
+    fibonacciNumbers = [None] * (abs(endNumber) + 1)
     if endNumber < -1:
         fibonacciNumbers[0] = 0
         fibonacciNumbers[1] = 1
         i = 2
-        while i < abs(endNumber)+1:
-            fibonacciNumbers[i] = fibonacciNumbers[i-2] - fibonacciNumbers[i-1]
+        while i < abs(endNumber) + 1:
+            fibonacciNumbers[i] = fibonacciNumbers[i - 2] - fibonacciNumbers[i - 1]
             i += 1
     elif endNumber == -1:
         fibonacciNumbers[0] = 0
@@ -29,10 +30,11 @@ def fibonacci():
         fibonacciNumbers[0] = 0
         fibonacciNumbers[1] = 1
         i = 2
-        while i < endNumber+1:
-            fibonacciNumbers[i] = fibonacciNumbers[i-2] + fibonacciNumbers[i-1]
+        while i < endNumber + 1:
+            fibonacciNumbers[i] = fibonacciNumbers[i - 2] + fibonacciNumbers[i - 1]
             i += 1
     print(fibonacciNumbers)
+
 
 def faculty():
     print("")
@@ -52,27 +54,32 @@ def faculty():
         print("invalid Input")
     print(output)
 
+
 def minimum():
-    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78 , 90, -4, 2, 5, 0, 42]
+    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78, 90, -4, 2, 5, 0, 42]
     my_array.sort()
     print("")
     print("Das niedrigste Element ist:", my_array[0])
 
+
 def maximum():
-    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78 , 90, -4, 2, 5, 0, 42]
+    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78, 90, -4, 2, 5, 0, 42]
     my_array.sort(reverse=True)
     print("")
     print("Das höchste Element ist:", my_array[0])
 
+
 def sumArray():
-    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78 , 90, -4, 2, 5, 0, 42]
+    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78, 90, -4, 2, 5, 0, 42]
     print("")
     print("Sie Summe ist:", sum(my_array))
 
+
 def average():
-    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78 , 90, -4, 2, 5, 0, 42]
+    my_array = [4, 7, 87, 12, -56, 9, -8, 4, -2, 5, 78, 90, -4, 2, 5, 0, 42]
     print("")
-    print("Der Mittelwert ist:", sum(my_array)/len(my_array))
+    print("Der Mittelwert ist:", sum(my_array) / len(my_array))
+
 
 def inversPyramid():
     print("")
@@ -82,6 +89,7 @@ def inversPyramid():
     while number > 0:
         print("*" * number)
         number -= 1
+
 
 def pyramid():
     print("")
@@ -93,30 +101,34 @@ def pyramid():
         print("*" * i)
         i += 1
 
+
 def exponent():
     print("")
     print("Welche Basis?")
-    base= int(input())
+    base = int(input())
     print("")
     print("Welcher Exponent?")
     exponent = int(input())
     print("")
-    print("Das Ergebnis lautet: ", base**exponent)
+    print("Das Ergebnis lautet: ", base ** exponent)
+
 
 def multiply(number, multiples):
     array = [None] * multiples
     i = 2
     array[0] = number
     while i <= multiples:
-        array[i-1] = array[0] * i
+        array[i - 1] = array[0] * i
         i += 1
     return array
+
 
 def small1x1():
     print("")
     print("Welche Zahl?")
     number = int(input())
     print(multiply(number, 10))
+
 
 def multiples():
     print("")
@@ -127,12 +139,13 @@ def multiples():
     multiples = int(input())
     print(multiply(number, multiples))
 
+
 def monteCarloThrow():
-    #array (0 = x, 1 = y, 2 = boolCircle, 3 = boolSquare)
-    array = [0,0,0,0]
+    # array (0 = x, 1 = y, 2 = boolCircle, 3 = boolSquare)
+    array = [0, 0, 0, 0]
     array[0] = random()
     array[1] = random()
-    line = sqrt(array[0]**2+array[1]**2)
+    line = sqrt(array[0] ** 2 + array[1] ** 2)
     if line <= 1:
         array[2] = 1
         array[3] = 1
@@ -140,6 +153,7 @@ def monteCarloThrow():
         array[2] = 0
         array[3] = 1
     return array
+
 
 def monteCarlo():
     print("")
@@ -151,11 +165,12 @@ def monteCarlo():
         arr = monteCarloThrow()
         inCircle += arr[2]
         inSquare += arr[3]
-        number -=1
-    print("Ergebnis für π: ",inCircle/inSquare*4)
+        number -= 1
+    print("Ergebnis für π: ", inCircle / inSquare * 4)
+
 
 def switch1(functionChoice):
-    switcher = { 
+    switcher = {
         1: fibonacci,
         2: faculty,
         3: minimum,
@@ -171,6 +186,7 @@ def switch1(functionChoice):
     }
     func = switcher.get(functionChoice, lambda: "falsche Eingabe")
     func()
+
 
 while 1:
     print("")
