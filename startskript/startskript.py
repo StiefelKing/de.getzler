@@ -7,6 +7,7 @@ def start():
     subprocess.Popen("C:\\Program Files\\KeePassXC\\KeePassXC.exe")
     subprocess.Popen("C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE")
     subprocess.Popen("G:\\ARNOtop\\Programm\\Selekt.exe")
+    subprocess.Popen(["explorer.exe", "shell:appsFolder\\Microsoft.Todos_8wekyb3d8bbwe!App"])
 
 
 def reset():
