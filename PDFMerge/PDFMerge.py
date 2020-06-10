@@ -16,7 +16,7 @@ class Attachment:
             self.filename = os.path.basename(filepath)
             x = self.filename.split("-")
             self.year4 = x[0]
-            self.year2 = self.year4[:2]
+            self.year2 = self.year4[2:4]
             self.notary = x[1]
             self.number = x[2].split(".")[0]
         except:

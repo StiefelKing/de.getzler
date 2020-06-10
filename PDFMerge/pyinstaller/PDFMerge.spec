@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['PDFMerge.py'],
-             pathex=['C:\\Users\\s.kaetzlmeier\\Desktop'],
+             pathex=['\\\\server\\USR_AT\\Notarstelle_Sonthofen\\Kaetzlmeier\\Programme\\_eigene\\de.getzler\\PDFMerge'],
              binaries=[],
              datas=[],
              hiddenimports=[],
