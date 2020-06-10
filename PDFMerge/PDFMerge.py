@@ -84,5 +84,3 @@ for root, dirs, files in os.walk("G:\\Notarstelle_Sonthofen\\Urkundenanlagen\\")
                 i += 1
         except FileNotFoundError:
             pass
-
-# todo eingabe alle
