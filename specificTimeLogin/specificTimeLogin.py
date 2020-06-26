@@ -48,6 +48,3 @@ schedule.every().day.at(input_time_main.strftime("%H:%M")).do(action)
 while True:
     schedule.run_pending()
     sleep(1)
-
-# todo open time Organizer
-# todo send WM_messages
